@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m::after {content: '\00a0';}
+
+
+/* common */
+body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
+
+
+#header {background: pink;}
+#header h1 {background: blue; /* margin-top: 50px; */}
+#gnb {background: mint;/*  width: 800px; height: 300px; padding: 50px; border: 20px solid transparent; background: yellow url(../img/logo.png) left top no-repeat; */}
+
+#gnb > ul  {background: green; /* overflow: hidden; */ display: inline-block;}
+#gnb > ul > li {float: right; background: lime;}
+
+/* #gnb > ul > li:nth-child(1) {float: left; background: lime;}
+#gnb > ul > li:nth-child(2) {float: left; background: purple;}
+#gnb > ul > li:nth-child(3) {float: left; background: #fffff;}
+#gnb > ul > li:nth-child(4) {float: left; background: sky;}
+#gnb > ul > li:nth-child(5) {float: left; background: purple;} */
+
+#body {background: yellow; max-width: 1200px; margin: 0 auto; overflow: hidden;}
+#body::after {content: ''; display: block; clear: both;}
+#lnb {background: skyblue; float: left; width: 200px;}
+#lnb > ul {background:hotpink; text-align: center;}
+#lnb > ul >li {display: block; background:hotpink;}
+#main {background: silver; margin-left: 300px; position: relative;}
+
+
+
+#main h2 {background: purple; color: white; left: 0;}
+#main span.inline {background: yellow;}
