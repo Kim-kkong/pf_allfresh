@@ -22,28 +22,37 @@ br.only-m::after {content: '\00a0';}
 /* common */
 body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
 
+#wrapper div.quick-menu {display: none;}
+#wrapper div.up {display: none;}
 
-#header {background: pink;}
-#header h1 {background: blue; /* margin-top: 50px; */}
-#gnb {background: mint;/*  width: 800px; height: 300px; padding: 50px; border: 20px solid transparent; background: yellow url(../img/logo.png) left top no-repeat; */}
+#header {}
+#header div.event {position: fixed; background: #000000; top: 0; width: 100%; height: 50px; }
+#header div.event img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
-#gnb > ul  {background: green; /* overflow: hidden; */ display: inline-block;}
-#gnb > ul > li {float: right; background: lime;}
+#gnb {position: fixed; top: 50px; width: 100%; height: 90px;  background-color: rgba(74, 41, 34, 0.8);}
 
-/* #gnb > ul > li:nth-child(1) {float: left; background: lime;}
-#gnb > ul > li:nth-child(2) {float: left; background: purple;}
-#gnb > ul > li:nth-child(3) {float: left; background: #fffff;}
-#gnb > ul > li:nth-child(4) {float: left; background: sky;}
-#gnb > ul > li:nth-child(5) {float: left; background: purple;} */
+#gnb h1 {position: absolute; width: 188px; height: 30px; top: 50%; left: 160px; z-index: 100; transform: translate(0, -50%);/* margin-top: 50px; */}
+#gnb div.nav {position: absolute; width: 1200px; height: 90px; left: 50%; top: 0; transform: translate(-50%, 0);}
+#gnb div.nav div.top-nav {position: absolute; height: 30px; font-size: 12px; color: #cccccc; right: 0; top: 15px; }
+#gnb div.nav div.top-nav ul li {float: left; padding-right: 20px;}
+#gnb div.nav div.top-nav ul li:nth-child(6) {padding-right: 0; font-weight: 800;}
+#gnb div.nav div.top-nav ul li div.label {position: absolute; background-color: #ff6363; margin-top:8px; text-align: center; padding: 2px 5px; z-index: 100; color: #ffffff; border-radius: 30px;}
+#gnb div.nav div.top-nav ul li div.label::before {content: ''; width: 5px; height: 5px; background-color: #ff6363;}
 
-#body {background: yellow; max-width: 1200px; margin: 0 auto; overflow: hidden;}
-#body::after {content: ''; display: block; clear: both;}
-#lnb {background: skyblue; float: left; width: 200px;}
-#lnb > ul {background:hotpink; text-align: center;}
-#lnb > ul >li {display: block; background:hotpink;}
-#main {background: silver; margin-left: 300px; position: relative;}
+#gnb div.nav div.bottom-nav {width: 1200px;  position: absolute; bottom: 0;}
+#gnb div.nav div.bottom-nav ul.main {position: absolute; bottom: 12px; font-family: 'Noto Serif KR', serif; right: 130px; line-height: 20px;}
+#gnb div.nav div.bottom-nav ul.main li {float: left; padding: 0 20px;} 
+#gnb div.nav div.bottom-nav ul.main li div.label {background-color: #ff6363;}
+#gnb div.nav div.bottom-nav ul.main li:nth-child(6) h3 {color: #ff9daa;}
+#gnb div.nav div.bottom-nav ul.main li h3 {font-size: 16px; color: #ffffff; font-weight: 300;}
+#gnb div.nav div.bottom-nav ul.main li div.sub-inner {display: none;} 
+#gnb div.nav div.bottom-nav ul.main div.label {display: inline-block; }
+#gnb div.nav div.bottom-nav ul.right {position: absolute; right: 0; bottom: 10px; }
 
+#gnb div.nav div.bottom-nav ul.right li {float: left; font-size: 16px; line-height: 20px; color: #cccccc;}
+#gnb div.nav div.bottom-nav ul.right li:first-child::before {content: '|'; padding: 0 25px;}
 
+#gnb div.nav div.bottom-nav ul.right li + li {padding-left: 20px;}
 
-#main h2 {background: purple; color: white; left: 0;}
-#main span.inline {background: yellow;}
+#gnb div.nav div.bottom-nav ul.right li div.label {display: none;}
+
