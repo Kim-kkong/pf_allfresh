@@ -68,7 +68,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #gnb div.nav div.bottom-nav ul.main li:nth-child(6) div.sub-inner {right: 0; display: none;}
 
 
-#main
+#main {position: relative;}
 #main-visual {position: relative;}
 #main-visual div.slide {position: relative; overflow: hidden;}
 #main-visual div.slide p.dummy {opacity: 0;}
@@ -85,7 +85,6 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #main-visual div.indicator ul li + li {margin-left: 10px;}
 
 #promotion {position: relative;}
-
 #promotion div.left {position: absolute; width: 50%; height: 100vh; left: 0; top: 0; background-color: #fafafa;}
 #promotion div.left p.dummy {opacity: 0;}
 #promotion div.left ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%; } 
@@ -96,8 +95,6 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion div.control {position: absolute; top: 50%; width: 100%;}
 
 #promotion div.left div.indicator {position: absolute; bottom: 50px; left: 50%; transform: translate(-50% 0);}
-
-
 #promotion div.left div.indicator ul {position: absolute; width: 150px; left: 50%; transform: translate(-50%, 0 );}
 #promotion div.left div.indicator ul li {float: left; width: 10px; height: 10px; border-radius: 100px; background-color: #666666; opacity: 0.3; text-indent: -99999px;}
 #promotion div.left div.indicator ul li.on {width: 40px; height: 10px; border-radius: 30px; background-color: #ff9900; opacity: 1;}
@@ -108,14 +105,20 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion div.right div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 25%; text-align: center; width: 100%;}
 #promotion div.right div p {font-size: 16px; color: #666666;position: absolute; top: 45%; width: 100%; text-align: center;line-height: 20px;}
 #promotion div.right div p em {font-weight: 900; line-height: 40px;}
-
 #promotion div.right div p.button {position: absolute; top: 80%; width: 100px; height: 20px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif;}
 #promotion div.right div p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
 
 
-#fruits {position: relative; top: 0;}
+#fruits {position: relative; top: 710px; height: 468px;}
+#fruits div img {position: absolute; top: 50%; right: 20px; width: 353px; height: 265px; transform: translate(0, -50%);}
 
-
+#fruits div div.text-box {position: absolute; left: 50px; top: 50%; transform: translate(0, -50%); width: 300px; height: 260px;}
+#fruits div div.text-box h4 {color: #333333; font-size: 24px; font-family: 'Noto Serif KR', serif; position: absolute; width: 100%; text-align: center;}
+#fruits div div.text-box p {color: #666666; font-size: 16px; position: absolute; top: 70px; left: 0; width: 100%; text-align: center; line-height: 25px;}
+#fruits div div.text-box p.button {position: absolute; top: 80%; width: 100px; height: 25px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif;}
+#fruits div div.text-box p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
+#fruits div.left {position: absolute; width: 50%; height: 100%; left: 0; top: 0; background-color: #fafafa;}
+#fruits div.right {position: absolute; width: 50%; height: 100%; right: 0; top: 0;}
 
 
 
