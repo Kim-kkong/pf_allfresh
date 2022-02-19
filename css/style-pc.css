@@ -93,34 +93,103 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion div.left ul li p {font-size: 16px; padding-bottom: 10px; color: #666666; text-align: center;}
 #promotion div.left ul > li:first-child {display: block;}
 #promotion div.control {position: absolute; top: 50%; width: 100%;}
-
 #promotion div.left div.indicator {position: absolute; bottom: 50px; left: 50%; transform: translate(-50% 0);}
 #promotion div.left div.indicator ul {position: absolute; width: 150px; left: 50%; transform: translate(-50%, 0 );}
 #promotion div.left div.indicator ul li {float: left; width: 10px; height: 10px; border-radius: 100px; background-color: #666666; opacity: 0.3; text-indent: -99999px;}
 #promotion div.left div.indicator ul li.on {width: 40px; height: 10px; border-radius: 30px; background-color: #ff9900; opacity: 1;}
 #promotion div.left div.indicator ul li + li {margin-left: 10px;}
-
 #promotion div.right {position: absolute; width: 50%; height: 100vh; right: 0; top: 0; background: url(../img/intro/s1-6.jpg) 0 0 no-repeat; background-size: cover;}
 #promotion div.right div {width: 440px; height: 565px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #ffffff; opacity: 0.8;}
 #promotion div.right div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 25%; text-align: center; width: 100%;}
-#promotion div.right div p {font-size: 16px; color: #666666;position: absolute; top: 45%; width: 100%; text-align: center;line-height: 20px;}
-#promotion div.right div p em {font-weight: 900; line-height: 40px;}
+#promotion div.right div p {font-size: 18px; color: #666666;position: absolute; top: 45%; width: 100%; text-align: center;line-height: 20px;}
+#promotion div.right div p em {font-weight: 800; line-height: 40px;}
 #promotion div.right div p.button {position: absolute; top: 80%; width: 100px; height: 20px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif;}
 #promotion div.right div p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
 
 
-#fruits {position: relative; top: 710px; height: 468px;}
+#fruits {position: relative; top: 930px; height: 468px; background-color: #ffffff;}
 #fruits div img {position: absolute; top: 50%; right: 20px; width: 353px; height: 265px; transform: translate(0, -50%);}
-
-#fruits div div.text-box {position: absolute; left: 50px; top: 50%; transform: translate(0, -50%); width: 300px; height: 260px;}
-#fruits div div.text-box h4 {color: #333333; font-size: 24px; font-family: 'Noto Serif KR', serif; position: absolute; width: 100%; text-align: center;}
-#fruits div div.text-box p {color: #666666; font-size: 16px; position: absolute; top: 70px; left: 0; width: 100%; text-align: center; line-height: 25px;}
-#fruits div div.text-box p.button {position: absolute; top: 80%; width: 100px; height: 25px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif;}
-#fruits div div.text-box p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
-#fruits div.left {position: absolute; width: 50%; height: 100%; left: 0; top: 0; background-color: #fafafa;}
+#fruits div div.inner div.text-box {position: absolute; right: 55%; top: 50%; transform: translate(0, -50%); width: 300px; height: 260px;}
+#fruits div div.inner div.text-box h4 {color: #333333; font-size: 24px; font-family: 'Noto Serif KR', serif; position: absolute; width: 100%; text-align: center;}
+#fruits div div.inner div.text-box p {color: #666666; font-size: 16px; position: absolute; top: 70px; left: 0; width: 100%; text-align: center; line-height: 25px;}
+#fruits div div.inner div.text-box p.button {position: absolute; top: 70%; width: 100px; height: 25px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif;}
+#fruits div div.inner div.text-box p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
+#fruits div.left {position: absolute; width: 50%; height: 100%; left: 0; top: 0;}
 #fruits div.right {position: absolute; width: 50%; height: 100%; right: 0; top: 0;}
 
 
+#story {position: relative; width: 100%; height: 800px; top: 900px; background-color: yellow;}
+#story div {position: absolute; width: 50%; height: 100%;}
+#story div div {width: 90%; height: 90%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#story div.left {left: 0; top: 0; background: url(../img/intro/bg-area-01.jpg) 0 0 no-repeat; background-size: cover;} 
+#story div.right {right: 0; top: 0; background: url(../img/intro/bg-area-02.jpg) 0 0 no-repeat; background-size: cover;} 
+#story div div h4 {color: #ffffff; font-size: 30px; position: absolute; width: 100%; text-align: center; font-family: 'Noto Serif KR', serif; top: 20%;}
+#story div div p {color: #ffffff; font-size: 16px; position: absolute; top: 30%; left: 0; width: 100%; text-align: center; line-height: 40px;}
+#story div div p.button {position: absolute; top: 60%; width: 100px; height: 25px; font-size: 14px; color: #ffffff; border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; line-height: 25px;}
+#story div div p.button:hover {font-size: 15px; transition: all 0.5s; border: none;}
+
+
+#gift {position: relative; top: 900px;}
+#gift ul {position: absolute; left: 50%; top: 0; padding-top: 50px; transform: translate(-50%, 0); width: 60%; height: 100%;}
+#gift ul li {position: relative; width: 100%; }
+#gift ul li + li {padding-top: 70px;}
+#gift ul li h4 {color: #333333; font-size: 30px; font-family: 'Noto Serif KR', serif; width: 100%; text-align: center; letter-spacing : 5px;}
+#gift ul li p {color: #666666; font-size: 17px; position: relative; padding: 30px 0; left: 0; width: 100%; text-align: center; line-height: 30px;}
+#gift ul li img {position: relative; left: 50%; bottom: 0; transform: translate(-50%, 0); }
+
+
+#footer {position: relative; top: 2300px; width: 100%; }
+#footer01 {position: relative; top: 0; height: 810px;  width: 100%; left: 50%; transform: translate(-50%, 0); border-bottom: 1px solid #dfdfdf;} 
+#footer01 div.left {position: absolute; width: 50%; height: 100%; left: 8%; top: 0; } 
+#footer01 div.left > a > img {position: absolute; bottom: 50px; left: 50%; transform: translate(-50%, 0);}
+#footer01 div.right {width: 50%; height: 100%; position: absolute; right: 0; top: 0;} 
+#footer01 div.right ul {width: 100%; height: calc(100%-50px); position: absolute; }
+#footer01 div.right ul li {padding-left: 50px;}
+#footer01 div.right ul li + li {padding-top: 50px;}
+
+#footer02 {width: 100%; height: 300px;  position: relative; top: 0; border-bottom: 1px solid #cccccc;}
+#footer02 h4 {color: #333333; font-size: 24px; font-family: 'Noto Serif KR', serif; position: absolute; width: 100%; text-align: center; top: 20%;}
+#footer02 p {color: #666666; font-size: 16px; position: absolute; top: 40%; left: 0; width: 100%; text-align: center;}
+#footer02 ul {position: absolute; left: 50%; top: 50%; transform: translate(-50%, 50%);}
+#footer02 ul li {float: left;}
+#footer02 ul li + li {padding-left: 30px;}
+#footer02 ul li p.button {position: relative; top: 60%; width: 130px; height: 25px; font-size: 14px; color: #666666; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; line-height: 25px;}
+#footer02 ul li p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
+#footer03 {position: relative; top: 0; left: 50%; transform: translate(-50%, 0); width: 1300px; height: 350px;}
+#footer03 div {position: absolute; width: 50%; height: 200px; margin: 50px 20px;}
+#footer03 div h4 {color: #5f3612; font-size: 24px; font-family: 'Noto Serif KR', serif; position: absolute; width: 100%; text-align: center; top: 0;}
+#footer03 div h5 {color: #666666; font-size: 14px; position: absolute; width: 100%; text-align: center; top: 20%;}
+#footer03 div p {color: #666666; font-size: 14px; position: absolute; top: 40%; left: 0; width: 100%; text-align: center; line-height: 30px;}
+#footer03 div ul {position: absolute; top: 85%; left: 50%; transform: translate(-50%, 0);}
+#footer03 div ul li {float: left;}
+#footer03 div ul li + li {padding-left: 20px;}
+#footer03 div ul li p.button {position: relative; width: 130px; height: 25px; font-size: 14px; color: #666666; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; line-height: 25px;}
+#footer03 div ul li p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
+#footer03 div.left {left: 0; border-right: 1px solid #e5e5e5;}
+#footer03 div.right {right: 0;}
+#footer03 div.right h5 {line-height: 40px; font-weight: 700;}
+#footer03 div.left h5 {font-family: 'Noto Serif KR', serif; color: #5f3612; font-size: 20px;}
+
+#footer04 {position: relative; top: 0; left: 50%; transform: translate(-50%, 0); width: 1300px; height: 350px; border-bottom: 1px solid #e5e5e5;}
+#footer04 ul.footer-outer {position: absolute; left: 10px; top: 20px;}
+#footer04 ul.footer-outer li {float: left;}
+#footer04 ul.footer-outer li + li {padding-left: 160px;}
+#footer04 ul.footer-outer li a {font-size: 16px; color: #444444; font-weight: 550;}
+#footer04 ul.footer-outer li ul.footer-inner {position: absolute; width: 150px; height: 100px; margin-top: 30px; }
+#footer04 ul.footer-outer li ul.footer-inner li {left: 0; width: 150px; height: 20px;}
+#footer04 ul.footer-outer li ul.footer-inner li > a {font-weight: 500; color: #777777; font-size: 13px;}
+#footer04 ul.footer-outer li ul.footer-inner li + li {padding-top: 15px; padding-left: 0;}
+
+
+#footer-last {position: relative; top: 0; text-align: center; padding: 50px 0 100px 0;}
+
+#footer-last h4 {padding-bottom: 30px;}
+#footer-last img.kcp {position: absolute; width: 60px; height: 60px; right: 50px; bottom: 30px;}
+#footer-last ul.info {font-size: 13px; color: #767676;}
+#footer-last ul.info li + li {padding-top: 20px;} 
+#footer-last ul.info li ul {position: absolute; left: 50%; transform: translate(-50%, 0);}
+#footer-last ul.info li ul li {float: left;}
+#footer-last ul.info li ul li + li {padding-left: 15px; padding-top: 0;}
 
 
 
@@ -132,47 +201,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-#story {position: relative; display: none;}
-#gift {position: relative; display: none;}
-#footer {position: relative; display: none;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*modul*/
+/*module*/
 
 
 
