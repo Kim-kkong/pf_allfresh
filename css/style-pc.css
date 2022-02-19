@@ -22,8 +22,18 @@ br.only-m::after {content: '\00a0';}
 /* common */
 body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
 
-#wrapper div.quick-menu {display: none;}
-#wrapper div.up {display: none;}
+#wrapper div.quick-menu {position: fixed; bottom: 130px; right: 20px; width: 60px; height: 324px; z-index: 10000; border-radius: 5px; background-color: #ffffff; box-shadow: 5px 5px 30px #aaaaaa;}
+#wrapper div.quick-menu ul {}
+#wrapper div.quick-menu ul li {width: 50px; height: 50px; color: #a27b73; font-size: 18px; border-radius: 100px;}
+#wrapper div.quick-menu ul li {margin-top: 10px; margin-left: 5px;}
+#wrapper div.quick-menu ul li:nth-child(1) {color: #461b0e; background-color: #ffdd1c ;}
+#wrapper div.quick-menu ul li:nth-child(4) {color: #ff9900;}
+#wrapper div.quick-menu ul li.on {background-color: #a27b73; color: #ffffff;}
+#wrapper div.quick-menu ul li dt {display: none;}
+#wrapper div.quick-menu ul li.on a dt {display: inline-block; position: absolute; color: #ffffff; background-color: #000000; opacity: 0.7; right: 50px; margin-top: 15px; font-size: 14px; border-radius: 30px; width: 80px; height: 15px; padding: 5px 5px; text-align: center;}
+#wrapper div.quick-menu ul li dd {position: relative; top: 50%; left: 50%; transform: translate(-18%, -50%);}
+
+#wrapper div.up {position: fixed; bottom: 30px; right: 20px; z-index: 10000; width: 36px; height: 36px; border: 1px solid #e5e5e5; background-color: #ffffff; opacity: 0.7; border-radius: 3px;}
 
 #header {position: fixed; z-index: 1000;}
 #header div.event {position: fixed; background: #000000; top: 0; width: 100%; height: 50px; z-index: 10000;}
@@ -118,7 +128,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #fruits div.right {position: absolute; width: 50%; height: 100%; right: 0; top: 0;}
 
 
-#story {position: relative; width: 100%; height: 800px; top: 900px; background-color: yellow;}
+#story {position: relative; width: 100%; height: 800px; top: 900px;}
 #story div {position: absolute; width: 50%; height: 100%;}
 #story div div {width: 90%; height: 90%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 #story div.left {left: 0; top: 0; background: url(../img/intro/bg-area-01.jpg) 0 0 no-repeat; background-size: cover;} 
@@ -190,6 +200,33 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #footer-last ul.info li ul {position: absolute; left: 50%; transform: translate(-50%, 0);}
 #footer-last ul.info li ul li {float: left;}
 #footer-last ul.info li ul li + li {padding-left: 15px; padding-top: 0;}
+
+
+
+
+
+
+/*sub_brandstory*/
+#sub_brand_main {position: relative; top: 0; left: 0; width: 100%; height: 100vh; background: url(../img/story/ab-bg-03.jpg);}
+
+
+
+#brand {position: relative; top: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
