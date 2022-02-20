@@ -293,9 +293,9 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #shopping div.title ul.bottom li + li {margin-left: 20px;}
 
 #shopping > ul {width: 1300px; height: 100%; position: absolute; top: 100px; left: 50%; transform: translate(-50%, 0);}
-#shopping > ul li {float: left; width: 30%; height: 460px; margin-top: 70px;}
+#shopping > ul li {float: left; width: 30%; height: 460px; margin-top: 70px; padding-top: 10px;}
 #shopping > ul li:hover div img {opacity: 0.6;}
-#shopping > ul li:hover {t}
+#shopping > ul li:hover {transform: scale(1.03); transition: all 0.5s;}
 #shopping > ul li div div {}
 #shopping > ul li.soldout div div.on {position: absolute; width: 90%; height: 350px; left: 20px; background: url(../img/dessert/icon_list_soldout.png) 0 0 no-repeat; background-size: cover; top: 0;}
 #shopping > ul li.outofstock div div.on {position: absolute; width: 90%; height: 350px; left: 20px; background: url(../img/dessert/icon_list_warehousing.png) 0 0 no-repeat; background-size: cover; top: 0;}
@@ -303,7 +303,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 
 #shopping > ul li + li {margin-left: 50px;}
-#shopping > ul li:nth-child(3n+1) {margin-left: 0;}
+#shopping > ul li:nth-child(3n+1) {margin-left: 0; }
 #shopping > ul li div {position: relative;}
 #shopping > ul li div img {width: 90%; height: 90%; position: relative; left: 20px;}
 #shopping > ul li div img.best-choice {position: absolute; width: 60px; height: 60px; left: 30px; top: 10px;}
