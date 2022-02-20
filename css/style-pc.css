@@ -56,7 +56,8 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #gnb div.nav div.bottom-nav ul.main li div.label {position: absolute; top: -15px; left: 120px; background-color: #ff6363; text-align: center; width: 30px; width: 30px; z-index: 100; color: #ffffff; border-radius: 8px; font-size: 10px; line-height: 15px; vertical-align: middle;}
 #gnb div.nav div.bottom-nav ul.main li:nth-child(6) h3 {color: #ff9daa;}
 #gnb div.nav div.bottom-nav ul.main li h3 {font-size: 16px; color: #ffffff; font-weight: 300;}
-#gnb div.nav div.bottom-nav ul.main li h3.on {border-bottom: 3px solid #ff6363; padding-bottom: 10px; }
+#gnb div.nav div.bottom-nav ul.main li h3:hover {color: #ff9900; border-bottom: 3px solid #ff6363; padding-bottom: 10px; transition: all 0.3s;}
+#gnb div.nav div.bottom-nav ul.main li h3.on {border-bottom: 3px solid #ff6363; padding-bottom: 10px; color: #ff6363;}
 #gnb div.nav div.bottom-nav ul.main div.label {display: inline-block; }
 #gnb div.nav div.bottom-nav ul.right {position: absolute; right: 0; bottom: 10px; }
 
@@ -232,24 +233,110 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #brand div.bottom div.right img {position: absolute; top: 220px; left: 250px;}
 
 
-#value {position: relative; height: 90vh; top: 0; background: url(../img/story/bg-dark.jpg) 0 0 repeat;}
-
+#value {position: relative; height: 100vh; top: 0; background: url(../img/story/bg-dark.jpg) 0 0 repeat;}
 #value div.slide-outer {width: 100%; height: 100%;}
 #value div.slide-outer h2 {position: absolute; top: 0; left: 50%; transform: translate(-50%, 40%); color: #ffffff; font-size: 36px; text-align: center; font-family: 'Noto Serif KR', serif; font-weight: 550;}
 #value div.slide-outer h3 {position: absolute; top: 20%; left: 50%; transform: translate(-50%, -40%); color: #ffffff; opacity: 0.5; font-size: 14px; text-align: center; font-weight: 400; line-height: 24px; letter-spacing: 1px;}
 #value div.slide-outer h3::after {content: ''; border-bottom: 1px solid #ffffff; width: 850px; height: 10px; position: absolute; left: 50%; top: 30px; transform: translate(-50%, 0);}
-
-#value div.slide-outer ul.slide-inner {position: absolute; top: 23%; left: 50%; transform: translate(-50%, 10%);}
-
+#value div.slide-outer ul.slide-inner {position: absolute; top: 23%; left: 50%; transform: translate(-50%, 8%);}
 #value div.slide-outer ul.slide-inner li {float: left; top: 0;}
-
 #value div.slide-outer ul.slide-inner li + li {margin-left: 15px;}
-
 #value div.slide-outer ul.slide-inner li dt {color: #ffffff; font-size: 16px; text-align: center; font-family: 'Noto Serif KR', serif; font-weight: 500; opacity: 0.5; margin-right: 25px; text-align: center; padding-top: 20px;}
 #value div.slide-outer ul.slide-inner li dt:hover {opacity: 1; border-top: 3px solid #ff9900;padding-top: 17px;}
 #value div.slide-outer ul.slide-inner li.on dt {opacity: 1; border-top: 3px solid #ff9900;padding-top: 17px;}
+#value div.slide-outer ul.slide-inner li dd {position: absolute; width: 50vw; height: 500px; left: 50%; top: 20%; transform: translate(-50%, 20%);}
+#value div.slide-outer ul.slide-inner li dd div.text {position: absolute; width: 60%; height: 60%; background-color: #ffffff; opacity: 0.9; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#value div.slide-outer ul.slide-inner li dd div.text i {font-size: 45px; color: #5f3612; text-align: center; margin-top: 50px; left: 50%; transform: translate(-50%, 0);}
+#value div.slide-outer ul.slide-inner li dd div.text p {font-size: 18px; text-align: center; margin-top: 30px; font-family: 'Noto Serif KR', serif;}
+#value div.slide-outer ul.slide-inner li dd div.text p em {font-size: 22px; text-align: center; font-family: 'Noto Serif KR', serif; line-height: 80px; font-weight: 600;}
+#value div.slide-outer ul.slide-inner li:nth-child(1) dd {background: url(../img/story/ba-01.jpg); left: -190%;}
+#value div.slide-outer ul.slide-inner li:nth-child(2) dd {background: url(../img/story/ba-02.jpg);}
+#value div.slide-outer ul.slide-inner li:nth-child(3) dd {left: 290%; background: url(../img/story/ba-03.jpg);}
+#value div.slide-outer ul.slide-inner li:nth-child(4) dd {left: 520%; background: url(../img/story/ba-04.jpg);}
+#value div.slide-outer div.control {position: absolute; width: 50.5%; height: 25px; top: 60%; left: 50%; transform: translate(-50%, 0);}
 
-#value div.slide-outer ul.slide-inner li dd {position: absolute; width: 50vw; height: 500px; background-color: pink; left: 50%; top: 20%; transform: translate(-50%, 20%);}
+#value div.slide-outer div.control p.prev {position: absolute; left: 0;}
+#value div.slide-outer div.control p.next {position: absolute; right: 0;}
+
+#value div.bottom-info {position: relative; height: 70vh; padding-top: 50px; background: url(../img/story/bg-dark.jpg) 0 0 repeat;}
+
+#value div.bottom-info div {width: 100%; height: 80%; overflow: hidden;}
+#value div.bottom-info div div.text {position: absolute; width: 30%; height: 60%;  padding-left: 20%; top: 20%;}
+#value div.bottom-info div div.text h3 {position: absolute; top: 0; left: 50%; transform: translate(-40%, 0); color: #ffffff; font-size: 36px; text-align: left; font-family: 'Noto Serif KR', serif; font-weight: 500;}
+#value div.bottom-info div div.text p {font-size: 14px; color: #ffffff; opacity: 0.5; padding-top: 200px; line-height: 30px;}
+#value div.bottom-info div > img {position: relative; left: 52%; overflow: hidden;}
+
+#value div.bottom-info div div.text p.button {position: absolute; top: 80%;   width: 150px; height: 20px; font-size: 14px; color: #ffffff; border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; padding: 10px 10px; left: 50%; transform: translate(-62%, 0); font-family: 'Noto Serif KR', serif; opacity: 1; text-align: center; line-height: 20px; letter-spacing: 1px;}
+#value div.bottom-info div div.text p.button:hover {font-size: 15px; transition: all 0.5s; border: none;}
+
+#footer.sub {position: relative; top: 800px; width: 100%;}
+
+
+/*sub_dessert*/
+
+#sub_dessert_main {position: relative; top: 0; left: 0; width: 100%; height: 100vh;}
+#main-banner {width: 100%; height: 40vh; background: url(../img/dessert/sub-bg3.jpg);}
+#main-banner h2 {font-size: 42px; position: absolute; top: 25%; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; font-weight: 550; color: #ffffff;}
+#main-banner h3 {font-size: 14px; position: absolute; top: 22%; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; font-weight: 500; color: #ffffff;}
+
+#shopping {position: relative; top: 0; left: 0; width: 100%; height: 100%;}
+#shopping div.title {height: 100px; width: 100%;}
+#shopping div.title ul.top {position: absolute; left: 50%; top: 0; margin-top: 50px; transform: translate(-50%, 0);}
+#shopping div.title ul.top li {float: left; padding: 10px 25px; border-radius: 30px; border: 1px solid #e5e5e5; color: #666666; font-family: 'Noto Serif KR', serif;}
+#shopping div.title ul.top li:hover {background-color: #ca7e6c; color: #ffffff; border: 1px solid #ca7e6c;}
+#shopping div.title ul.top li.on {background-color: #ca7e6c; color: #ffffff; border: 1px solid #ca7e6c;}
+#shopping div.title ul.top li + li {margin-left: 20px;}
+#shopping div.title ul.bottom {position: absolute; left: 50%; top: 0; margin-top: 110px; transform: translate(-50%, 0);}
+#shopping div.title ul.bottom li {float: left; color: #cccccc; font-family: 'Noto Serif KR', serif; font-size: 13px;}
+#shopping div.title ul.bottom li:hover {color: #ff9900;}
+#shopping div.title ul.bottom li.on {color: #ff9900;}
+#shopping div.title ul.bottom li + li {margin-left: 20px;}
+
+#shopping > ul {width: 1300px; height: 100%; position: absolute; top: 100px; left: 50%; transform: translate(-50%, 0);}
+#shopping > ul li {float: left; width: 30%; height: 460px; margin-top: 70px;}
+#shopping > ul li:hover div img {opacity: 0.6;}
+#shopping > ul li:hover {t}
+#shopping > ul li div div {}
+#shopping > ul li.soldout div div.on {position: absolute; width: 90%; height: 350px; left: 20px; background: url(../img/dessert/icon_list_soldout.png) 0 0 no-repeat; background-size: cover; top: 0;}
+#shopping > ul li.outofstock div div.on {position: absolute; width: 90%; height: 350px; left: 20px; background: url(../img/dessert/icon_list_warehousing.png) 0 0 no-repeat; background-size: cover; top: 0;}
+
+
+
+#shopping > ul li + li {margin-left: 50px;}
+#shopping > ul li:nth-child(3n+1) {margin-left: 0;}
+#shopping > ul li div {position: relative;}
+#shopping > ul li div img {width: 90%; height: 90%; position: relative; left: 20px;}
+#shopping > ul li div img.best-choice {position: absolute; width: 60px; height: 60px; left: 30px; top: 10px;}
+#shopping > ul li div.text {position: relative; top: 15px;}
+#shopping > ul li div.text h4 { font-size: 17px; color: #444444; font-family: 'Noto Serif KR', serif; padding-left: 20px;}
+#shopping > ul li div.text p {font-size: 13px; color: #b5725e; margin: 10px 0; padding-left: 20px;}
+#shopping > ul li div.text h5 {font-size: 13px; color: #ff7e8f; font-family: 'Noto Serif KR', serif; padding-left: 20px;}
+#shopping > ul li div.text h5 em {font-size: 18px; padding-right: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
