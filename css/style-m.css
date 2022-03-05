@@ -57,18 +57,45 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #gnb-mobile div.nav div.side-nav ul.login li:nth-child(2) {position: absolute; top: 50%; right: 20%; transform: translate(0, -50%); border: 1px solid #999999; margin-right: 20px; padding: 5px 10px;}
 #gnb-mobile div.nav div.side-nav ul.login li:nth-child(3) {position: absolute; top: 50%; right: 0; transform: translate(0, -50%); margin-right: 10px; border: 1px solid #999999; padding: 5px 10px;}
 
-#gnb-mobile div.nav div.side-nav ul.icon-list {position: relative; height: 145px; padding: 15px 5px; border-bottom: 1px solid #333333;}
+#gnb-mobile div.nav div.side-nav ul.icon-list {position: relative; height: 135px; padding: 15px 5px; border-bottom: 1px solid #999999;}
 #gnb-mobile div.nav div.side-nav ul.icon-list li {float: left; width: 70px; height: 60px; text-align: center; padding-top: 10px;}
-#gnb-mobile div.nav div.side-nav ul.icon-list li i {font-size: 35px; text-align: center; color: #999999;}
+#gnb-mobile div.nav div.side-nav ul.icon-list li i {font-size: 22px; text-align: center; color: #999999;}
 #gnb-mobile div.nav div.side-nav ul.icon-list li p {position: relative; font-size: 13px; text-align: center; line-height: 30px; color: #999999;}
 
 
-#gnb-mobile div.nav div.side-nav div.main {position: relative;}
+#gnb-mobile div.nav div.side-nav div.main {position: relative; top: 0; }
+#gnb-mobile div.nav div.side-nav div.main ul {position: absolute; width: 100%;}
+#gnb-mobile div.nav div.side-nav div.main ul.left {}
+#gnb-mobile div.nav div.side-nav div.main ul.left.on {}
+#gnb-mobile div.nav div.side-nav div.main ul.right {}
+#gnb-mobile div.nav div.side-nav div.main ul h2 {position: absolute; width: 50%; height: 39px; border-bottom: 1px solid #999999; font-size: 14px; font-weight: 500; text-align: center; line-height: 40px; color: #000000;}
+#gnb-mobile div.nav div.side-nav div.main ul.right h2 {right: 0; border-left: 1px solid #999999;}
+#gnb-mobile div.nav div.side-nav div.main ul li {position: relative; top: 40px; color: #555555; }
+#gnb-mobile div.nav div.side-nav div.main ul li h3 {width: 100%; height: 40px; display: block; color: #000000;}
+#gnb-mobile div.nav div.side-nav div.main ul.left.on li {display: block; border-bottom: 1px solid #999999;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li {display: none;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li h3 p {position: relative; width: 39px; height: 39px; background-color: #e5e5e5; text-align: center; line-height: 36px;} 
+#gnb-mobile div.nav div.side-nav div.main ul.left li h3 span {position: absolute; width: 200px; height: 39px; top: 0; left: 45px; line-height: 39px; font-size: 13px; }
+#gnb-mobile div.nav div.side-nav div.main ul.left li div.sub-inner {position: relative; width: 100%; top: -40px; padding-left: 10px; display: none;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li.on div.sub-inner {position: relative; width: 100%; top: -40px; padding-left: 10px; display: block;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li div.sub-inner ul.main_sub {position: relative; width: 100%; top: 0;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li div.sub-inner ul.main_sub li::before {content: '└';  padding: 0 15px;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li div.sub-inner ul.main_sub li {height: 40px; width: 100%; left: -10px; border-bottom: 1px solid #e5e5e5; line-height: 40px;}
+#gnb-mobile div.nav div.side-nav div.main ul.left li div.sub-inner ul.main_sub li a {position: relative; display: inline-block; width: 85%; height: 100%;}
+#gnb-mobile div.nav div.side-nav div.main ul.right li {position: relative; width: clac(100% - 10px); height: 39px; border-bottom: 1px solid #999999; line-height: 41px; padding-left: 10px;display: none;}
+#gnb-mobile div.nav div.side-nav div.main ul.right.on li {position: relative; width: clac(100% - 10px); height: 39px; border-bottom: 1px solid #999999; line-height: 41px; padding-left: 10px; display: block;}
+#gnb-mobile div.nav div.side-nav div.main ul.right li div.sub-inner {position: relative; width: 100%; top: -40px; padding-left: 10px; display: block;}
+#gnb-mobile div.nav div.side-nav div.main ul.right li a {}
+#gnb-mobile div.nav div.side-nav div.main ul.right li p.label {font-size: 11px; padding: 5px 8px 3px 8px; display: inline; border-radius: 30px; background-color: #ff6363; color: #ffffff; font-weight: 500;}
+#gnb-mobile div.nav div.side-nav div.main ul.right li i {position: absolute; right: 0; top: 0; line-height: 41px; margin-right: 10px;}
+
+
+#gnb-mobile div.nav div.side-nav ul.recent {position: relative; width: 100%; top: 50%; background-color: yellowgreen; }
 
 
 
 
-
+#gnb-mobile div.nav div.side-nav ul.info {position: relative; top: 100%;}
 
 
 
