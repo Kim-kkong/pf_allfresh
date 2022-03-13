@@ -91,6 +91,8 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #main-visual div.slide ul > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
 #main-visual div.slide ul > li img {width: 100%; height: 100%;}
 #main-visual div.slide ul > li:first-child {display: none;}
+#main-visual div.slide ul li:nth-child(3) p.top-img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  width: 250px; height: 500px; }
+
 
 #main-visual p.control {position: absolute; top: 50%; width: 100%;}
 #main-visual p.control a.prev {position: absolute; left: 0;}
@@ -108,15 +110,17 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion li.left {width: 50%; height: 80vh; background-color: #fafafa;}
 #promotion li.left p.dummy {opacity: 0;}
 #promotion li.left ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%; } 
-#promotion li.left > ul > li {position: absolute; width: 450px; height: 450px; display: none; left: 50%; top: 50px; transform: translate(-50%, 0);}
+#promotion li.left ul > li {position: absolute; width: 450px; height: 450px; display: none; left: 50%; top: 50px; transform: translate(-50%, 0);}
+#promotion li.left ul > li:first-child {display: block;}
+
 #promotion li.left ul li h4 {font-size: 24px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif;}
 #promotion li.left ul li p {font-size: 16px; padding-bottom: 10px; color: #666666; text-align: center; }
-#promotion li.left ul > li:first-child {display: block;}
-#promotion li.left div.control {position: absolute; top: 50%; width: 100%;}
-#promotion li.left div.control p.prev {position: absolute; left:0;}
-#promotion li.left div.control p.next {position: absolute; right:0;}
+
+#promotion li.left p.control {position: absolute; top: 40%; transform: translate(0, -50%); width: 100%;}
+#promotion li.left p.control a.prev {position: absolute; left:0;}
+#promotion li.left p.control a.next {position: absolute; right:0;}
 #promotion li.left div.indicator {position: absolute; bottom: 50px; left: 50%; transform: translate(-50% 0);}
-#promotion li.left div.indicator ul {position: absolute; width: 150px; left: 50%; transform: translate(-50%, 0 );}
+#promotion li.left div.indicator ul {position: absolute; width: 150px; left: 50%; transform: translate(-50%, 0 ); }
 #promotion li.left div.indicator ul li {float: left; width: 10px; height: 10px; border-radius: 100px; background-color: #666666; opacity: 0.3; text-indent: -99999px;}
 #promotion li.left div.indicator ul li.on {width: 40px; height: 10px; border-radius: 30px; background-color: #ff9900; opacity: 1;}
 #promotion li.left div.indicator ul li + li {margin-left: 10px;}
@@ -333,7 +337,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 
 
-
+/*패럴렉스*/
 
 
 

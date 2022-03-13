@@ -25,6 +25,7 @@
 
   <body class="main">
     <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
       <div class="quick-menu">
         <ul>
           <li><a href="#">
@@ -77,7 +78,7 @@
             <div class="bottom-nav">
               <ul class="main">
                 <li><a href="#">
-                  <h3 class="on">금액별 선물세트 </h3>
+                  <h3 id="sub-title">금액별 선물세트 </h3>
                   <div class="label">new</div>
                   <div class="sub-inner">
                     <ul class="main_sub">
@@ -92,7 +93,7 @@
                 </a></li>
 
                 <li><a href="#">
-                  <h3>선물 과일</h3>
+                  <h3 id="sub-title">선물 과일</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">혼합과일(축하,감사)</a></li>
@@ -106,7 +107,7 @@
                 </a></li>
 
                 <li><a href="#">
-                  <h3>이달의 과일</h3>
+                  <h3 id="sub-title">이달의 과일</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">이달의 과일</a></li>
@@ -116,7 +117,7 @@
                 
                 </a></li>
                 <li><a href="#">
-                  <h3>정기 구독</h3>
+                  <h3 id="sub-title">정기 구독</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">정기구독</a></li>
@@ -126,7 +127,7 @@
                   </div>
                 </a></li>
                 <li><a href="../page/dessert.html">
-                  <h3>도시락/디저트</h3>
+                  <h3 id="sub-title">도시락/디저트</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">과일도시락</a></li>
@@ -137,7 +138,7 @@
                   </div>
                 </a></li>
                 <li><a href="../page/brandstory.html">
-                  <h3>브랜드스토리</h3>
+                  <h3 id="sub-title">브랜드스토리</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">올프레쉬</a></li>
@@ -154,7 +155,7 @@
                 <li><a href="#"><i class="fas fa-thin fa-user"></i></a></li>
                 <li><a href="#">
                   <i class="fas fa-thin fa-cart-shopping"></i>
-                  <div class="label cart"></div>
+                  <div class="label cart">0</div>
                 </a></li>
                 <li><a href="#"><i class="fas fa-thin fa-magnifying-glass"></i></a></li>
               </ul>
@@ -195,9 +196,9 @@
                 <li><a href="#"><i class="fas fa-light fa-m"></i><p>마일리지</p></a></li>
               </ul>
               <div class="main">
-                <ul class="left on">
+                <ul class="left">
                   <h2><a href="#">카테고리</a></h2>
-                  <li><a href="#">
+                  <li class="open"><a href="#">
                     <h3 class="on">
                       <a href="#">
                         <p><i class="fas fa-light fa-angle-up"></i></p>  
@@ -599,5 +600,48 @@
         </section>
       </footer>
     </div>
+    <script>
+      'use strict'
+      
+      //gnb
+      $('div.bottom-nav > ul.main > li').on('mouseenter', function() {
+        $(this).addClass('open');
+      });
+      $('div.bottom-nav > ul.main > li').on('mouseleave', function() {
+        $(this).removeClass('open');
+      });
+      $('div.bottom-nav > ul.main > li > a > div.sub-inner').on('mouseenter', function() {
+        $(this).parent().parent().addClass('open');
+      });
+      $('div.bottom-nav > ul.main > li > a > div.sub-inner').on('mouseleave', function() {
+        $(this).parent().parent().removeClass('open');
+      });
+      
+      //scroll event
+      checkScroll();
+      $(window).on('scroll', function() {
+        checkScroll();
+      });
+      
+      function checkScroll() {
+        var scrollAmt = $(document).scrollTop();
+        if (scrollAmt > 200) {
+          $('#header div.event').css({'top': '-50px'});
+          $('#gnb').addClass('up');
+        } else {
+          $('#header div.event').css({'top': '0'});
+          $('#gnb').removeClass('up');
+        }
+        
+        $('#wrapper > div.quick-menu ').css({'top': (scrollAmt + 250) + 'px'});
+      }
+      
+      $('#wrapper div.up').on('click', function() {
+        $('html, body').stop(true).animate({'scrollTop': 0}, 500);
+      });
+
+  </script>
+
+
   </body>
 </html>
