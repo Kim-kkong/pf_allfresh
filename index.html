@@ -77,7 +77,7 @@
             <div class="bottom-nav">
               <ul class="main">
                 <li><a href="#">
-                  <h3 class="on">금액별 선물세트 </h3>
+                  <h3 id="sub-title">금액별 선물세트 </h3>
                   <div class="label">new</div>
                   <div class="sub-inner">
                     <ul class="main_sub">
@@ -92,7 +92,7 @@
                 </a></li>
 
                 <li><a href="#">
-                  <h3>선물 과일</h3>
+                  <h3 id="sub-title">선물 과일</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">혼합과일(축하,감사)</a></li>
@@ -106,7 +106,7 @@
                 </a></li>
 
                 <li><a href="#">
-                  <h3>이달의 과일</h3>
+                  <h3 id="sub-title">이달의 과일</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">이달의 과일</a></li>
@@ -116,7 +116,7 @@
                 
                 </a></li>
                 <li><a href="#">
-                  <h3>정기 구독</h3>
+                  <h3 id="sub-title">정기 구독</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">정기구독</a></li>
@@ -126,7 +126,7 @@
                   </div>
                 </a></li>
                 <li><a href="brandstory.html">
-                  <h3>도시락/디저트</h3>
+                  <h3 id="sub-title">도시락/디저트</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">과일도시락</a></li>
@@ -137,7 +137,7 @@
                   </div>
                 </a></li>
                 <li><a href="page/brandstory.html">
-                  <h3>브랜드스토리</h3>
+                  <h3 id="sub-title">브랜드스토리</h3>
                   <div class="sub-inner">
                     <ul class="main_sub">
                       <li><a href="#">올프레쉬</a></li>
@@ -195,9 +195,9 @@
                 <li><a href="#"><i class="fas fa-light fa-m"></i><p>마일리지</p></a></li>
               </ul>
               <div class="main">
-                <ul class="left on">
+                <ul class="left">
                   <h2><a href="#">카테고리</a></h2>
-                  <li><a href="#">
+                  <li class="open"><a href="#">
                     <h3 class="on">
                       <a href="#">
                         <p><i class="fas fa-light fa-angle-up"></i></p>  
@@ -695,5 +695,37 @@
         </section>
       </footer>
     </div>
+<script>
+'use strict'
+
+//gnb
+$('div.bottom-nav > ul.main > li').on('mouseenter', function() {
+  $(this).addClass('open');
+});
+$('div.bottom-nav > ul.main > li').on('mouseleave', function() {
+  $(this).removeClass('open');
+});
+$('div.bottom-nav > ul.main > li > a > div.sub-inner').on('mouseenter', function() {
+  $(this).parent().parent().addClass('open');
+});
+$('div.bottom-nav > ul.main > li > a > div.sub-inner').on('mouseleave', function() {
+  $(this).parent().parent().removeClass('open');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
   </body>
 </html>
