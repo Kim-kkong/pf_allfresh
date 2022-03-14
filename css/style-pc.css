@@ -84,8 +84,8 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 
 
-#main {position: relative; height: 4300px;}
-#main-visual {position: relative;}
+#main {position: relative; height: 4400px;}
+#main-visual {position: fixed;}
 #main-visual div.slide {position: relative; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; }
 #main-visual div.slide p.dummy {opacity: 0;}
 #main-visual div.slide ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
@@ -105,7 +105,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #main-visual div.indicator ul li + li {margin-left: 10px;}
 
 
-#promotion {position: relative; }
+#promotion {position: relative; top: 1000px; transition: all 0.5s;}
 #promotion div.content {position: relative;}
 #promotion div.content ul.outer-box {overflow: hidden;}
 #promotion div.content ul.outer-box li {position: relative; float: left;  box-sizing: border-box;}
@@ -127,8 +127,10 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion li.left div.indicator ul li.on {width: 40px; height: 10px; border-radius: 30px; background-color: #ff9900; opacity: 1;}
 #promotion li.left div.indicator ul li + li {margin-left: 10px;}
 
-#promotion li.right {width: 50%; height: 80vh; background: url(../img/intro/s1-6.jpg) 0 0 no-repeat; background-size: cover; }
-#promotion li.right div {width: 440px; height: 565px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #ffffff; opacity: 0.8;}
+#promotion li.right {width: 50%; height: 80vh; overflow: hidden; }
+#promotion li.right img {position: relative; width: 100%; object-fit: cover;}
+#promotion li.right.on img {transform: scale(1.05); transition: all 3s;}
+#promotion li.right div {width: 440px; height: 565px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #ffffff; opacity: 0.8; z-index: 10000; }
 #promotion li.right div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 25%; text-align: center; width: 100%;}
 #promotion li.right div p {font-size: 18px; color: #666666;position: absolute; top: 45%; width: 100%; text-align: center;line-height: 20px;}
 #promotion li.right div p em {font-weight: 800; line-height: 40px;}
@@ -136,7 +138,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion li.right div p.button:hover {font-size: 15px; transition: all 0.5s; border: none; color: #ff9900;}
 
 
-#fruits {position: relative; width: 100%; height: 468px; background-color: #ffffff;}
+#fruits {position: relative; width: 100%; height: 468px; background-color: #ffffff; top: 1000px;}
 #fruits div {position: absolute; width: 100%; top: 50%;}
 #fruits div ul {position: relative;}
 #fruits div ul li {position: absolute; width: 50%; float: left; box-sizing: border-box;}
@@ -150,7 +152,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #fruits div ul li div.inner div.text-box p.button {position: absolute; top: 70%; width: 100px; height: 25px; font-size: 14px; color: #444444; border-top: 1px solid #666666; border-bottom: 1px solid #666666; padding: 10px 10px 10px 10px; left: 50%; transform: translate(-50%, 0); font-family: 'Noto Serif KR', serif; transition: all 0.5s;}
 #fruits div ul li div.inner div.text-box p.button:hover {font-size: 15px; border: none; color: #ff9900;} 
 
-#story {position: relative; width: 100%; height: 800px; top: 0px;}
+#story {position: relative; width: 100%; height: 800px; top: 1000px;}
 #story div {position: absolute; width: 50%; height: 100%;}
 #story div div {width: 90%; height: 90%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 #story div.left {left: 0; top: 0; background: url(../img/intro/bg-area-01.jpg) 0 0 no-repeat; background-size: cover;} 
@@ -161,16 +163,16 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #story div div p.button:hover {font-size: 15px; transition: all 0.5s; border: none;}
 
 
-#gift {position: relative; top: 0;}
+#gift {position: relative; top: 1000px; width: 100%; height: 100%; background-color: #ffffff;}
 #gift ul {position: absolute; left: 50%; top: 0; padding-top: 50px; transform: translate(-50%, 0); width: 60%; height: 100%;}
-#gift ul li {position: relative; width: 100%; }
+#gift ul li {position: relative; width: 100%;}
 #gift ul li + li {padding-top: 70px;}
 #gift ul li h4 {color: #333333; font-size: 30px; font-family: 'Noto Serif KR', serif; width: 100%; text-align: center; letter-spacing : 5px;}
 #gift ul li p {color: #666666; font-size: 17px; position: relative; padding: 30px 0; left: 0; width: 100%; text-align: center; line-height: 30px;}
 #gift ul li img {position: relative; left: 50%; bottom: 0; transform: translate(-50%, 0); }
 
 
-#footer {position: relative; width: 100%;}
+#footer {position: relative; width: 100%; background-color: #ffffff; bottom: 0;}
 #footer01 {position: relative; top: 0; height: 810px;  width: 100%; left: 50%; transform: translate(-50%, 0); border-bottom: 1px solid #dfdfdf;} 
 #footer01 div.left {position: absolute; width: 50%; height: 100%; left: 8%; top: 0; } 
 #footer01 div.left > a > img {position: absolute; bottom: 50px; left: 40%; transform: translate(-50%, 0);}

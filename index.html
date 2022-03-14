@@ -452,7 +452,7 @@
                   </div>
                 </div>
               </li>
-              <li class="right">
+              <li class="right on">
                 <div class="content-inner">
                   <h4>올프레쉬만의 특별한 과일선물</h4>
                   <p><em>비대면 명절의 완벽한 마음전달 방법,</em><br />
@@ -461,6 +461,7 @@
 
                   <p class="button"><a href="#">보러가기 Go!</a></p>
                 </div>
+                <img alt="" src="img/intro/s1-6.jpg" />
               </li>
             </ul>
           </div>
@@ -710,9 +711,33 @@ $('div.bottom-nav > ul.main > li > a > div.sub-inner').on('mouseleave', function
 
 //scroll event
 checkScroll();
-$(window).on('scroll', function() {
+
+$(window).on('scroll resize', function() {
   checkScroll();
+  promotionP();
 });
+
+
+function promotionP() {
+  var scroll = $(document).scrollTop();
+  var minScroll = $('#promotion').offset().top - $(window).height();
+  var maxScroll = $('#promotion').offset().top + $('#promotion').outerHeight();
+
+  console.log(scroll + '/' + minScroll + '/' + maxScroll);
+
+  if (scroll <= minScroll) {
+
+  $('li.right').removeClass('on');
+
+  } else {
+
+    $('li.right').addClass('on');
+
+  }
+}
+
+
+
 
 function checkScroll() {
   var scrollAmt = $(document).scrollTop();
@@ -821,9 +846,6 @@ function showBanner(n) {
   bannerNext = (n === numbanner) ? 1 : (n + 1);
   console.log(bannerPrev + ' / ' + banerNow + ' / ' + bannerNext);
 }
-
-
-
 
 
 
