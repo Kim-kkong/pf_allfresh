@@ -393,7 +393,7 @@
               <li class="left">
                 <div class="slide">
                   <p class="dummy"><img alt="" src="img/intro/s1-1.jpg" /></p>
-                  <ul>
+                  <ul class="slide-left">
                     <li>
                       <a href="#">
                         <img alt="" src="img/intro/s1-1.jpg" />
@@ -439,7 +439,7 @@
                       </a>
                     </li>
                   </ul>
-
+                </div>
                   <p class="control">
                     <a href="#" class="prev"><img alt="prev" src="img/intro/arrow_left.png" /></a>
                     <a href="#" class="next"><img alt="next" src="img/intro/arrow_right.png" /></a>
@@ -447,15 +447,14 @@
 
                   <div class="indicator">
                     <ul class="indicator-inner">          
-
                     </ul>
                   </div>
-                </div>
+                
               </li>
-              <li class="right on">
+              <li class="right">
                 <div class="content-inner">
                   <h4>올프레쉬만의 특별한 과일선물</h4>
-                  <p><em>비대면 명절의 완벽한 마음전달 방법,</em><br />
+                  <p class="text-up"><em>비대면 명절의 완벽한 마음전달 방법,</em><br />
                     선별과일과 메시지카드로 마음까지 전달해드립니다.
                   </p>
 
@@ -530,13 +529,13 @@
 
         <section id="gift">
           <ul>
-            <li>
+            <li class="top">
               <h4>ALLFRESH NEW YEAR'S GIFT</h4>
               <p>비대면의 시대 만나지는 못하지만<br />
                 정성과 마음을 담아 배송해 드립니다.</p>
               <a href="#"></a> <img alt="선물1호" src="img/intro/220119BB1.jpg" /> </a>  
             </li>
-            <li>
+            <li class="bottom">
               <h4>ALLFRESH PREMIUM GIFT</h4>
               <p>과일소믈리에가 직접 선별한 과일을<br />
                 소중한 사람에게 선물하세요.</p>
@@ -714,39 +713,104 @@ checkScroll();
 
 $(window).on('scroll resize', function() {
   checkScroll();
-  promotionP();
+  promotionE();
+  scrollEventF();
+  scrollEventS();
+
+  scrollEventG2();
 });
 
 
-function promotionP() {
+function promotionE() {
   var scroll = $(document).scrollTop();
   var minScroll = $('#promotion').offset().top - $(window).height();
   var maxScroll = $('#promotion').offset().top + $('#promotion').outerHeight();
 
-  console.log(scroll + '/' + minScroll + '/' + maxScroll);
 
   if (scroll <= minScroll) {
 
-  $('li.right').removeClass('on');
+  $('#promotion li.right').removeClass('on');
+  $('#promotion li.left').removeClass('on');
+
+  } else {
+   
+    $('#promotion li.right').addClass('on');
+    $('#promotion li.left').addClass('on');
+  }
+}
+
+
+function scrollEventF() {
+  var scroll = $(document).scrollTop();
+  var minScroll = $('#fruits').offset().top - ($(window).height() / 2);
+  var maxScroll = $('#fruits').offset().top + $('#fruits').outerHeight(true) - ($(window).height() /2);
+
+
+  if (scroll <= minScroll && scroll <= maxScroll) {
+
+    $('#fruits li.right').removeClass('on');
+    $('#fruits li.left').removeClass('on');
+    
 
   } else {
 
-    $('li.right').addClass('on');
+    $('#fruits li.right').addClass('on');
+    $('#fruits li.left').addClass('on');
+  }
+}
+
+
+function scrollEventS() {
+  var scroll = $(document).scrollTop();
+  var minScroll = $('#story').offset().top - ($(window).height() / 2);
+  var maxScroll = $('#story').offset().top + $('#story').outerHeight(true) - ($(window).height() /2);
+
+  if (scroll <= minScroll && scroll <= maxScroll) {
+
+    $('#story h4').removeClass('on');
+    $('#story p').removeClass('on');
+    
+
+  } else {
+
+    $('#story h4').addClass('on');
+    $('#story p').addClass('on');
+  }
+}
+
+function scrollEventG2() {
+  var scroll = $(document).scrollTop();
+  var minScroll = $('#gift').offset().top - ($(window).height() / 2);
+  var maxScroll = $('#gift').offset().top + $('#gift').outerHeight(true) - ($(window).height() /2);
+
+  if (scroll <= minScroll && scroll <= maxScroll) {
+
+    $('#gift li.top').removeClass('on');
+    $('#gift li.bottom').removeClass('on');
+
+  } else {
+
+    $('#gift li.top').addClass('on');
+    $('#gift li.bottom').addClass('on');
 
   }
 }
 
 
-
-
 function checkScroll() {
   var scrollAmt = $(document).scrollTop();
   if (scrollAmt > 200) {
+    $('#wrapper div.quick-menu').addClass('on');
     $('#header div.event').css({'top': '-50px'});
     $('#gnb').addClass('up');
+    $('#gnb-mobile').addClass('up');
+    
   } else {
     $('#header div.event').css({'top': '0'});
     $('#gnb').removeClass('up');
+
+    $('#gnb-mobile').removeClass('up');
+    $('#wrapper div.quick-menu').removeClass('on')
   }
   
   $('#wrapper > div.quick-menu ').css({'top': (scrollAmt + 250) + 'px'});
@@ -814,11 +878,13 @@ var bannerFirst = 1;
 
 
 
-$('#promotion div.slide > ul > li').each(function(i) {
-  $('#promotion  div.slide > ul > li').css({'display': 'none'});
-  $('#promotion div.slide > ul > li:eq(' + (i - 1) + ')').css({'display': 'block'});
+$('#promotion div.slide > ul.slide-left > li').each(function(i) {
+  $('#promotion div.slide > ul.slide-left > li').css({'display': 'none'});
+  $('#promotion div.slide > ul.slide-left > li:eq(' + (i - 1) + ')').css({'display': 'block'});
   $('#promotion div.indicator .indicator-inner').append('<li><a href="#">' + (i + 1) + '번 슬라이드</a></li>\n');
 });
+
+
 
 showBanner(bannerFirst);
 
@@ -827,18 +893,18 @@ $('#promotion div.indicator .indicator-inner li a').on('click', function() {
   showBanner(index + 1);
 });
 
-$('#promotion div.slide .control a.prev').on('click', function() {
+$('#promotion li.left .control a.prev').on('click', function() {
   showBanner(bannerPrev);
 });
 
-$('#promotion div.slide  .control a.next').on('click', function() {
+$('#promotion li.left .control a.next').on('click', function() {
   showBanner(bannerNext);
 });
 
 
 function showBanner(n) {
-  $('#promotion div.slide > ul > li').css({'display': 'none'});
-  $('#promotion div.slide > ul > li:eq(' + (n - 1) + ')').css({'display': 'block'});
+  $('#promotion div.slide > ul.slide-left > li').css({'display': 'none'});
+  $('#promotion div.slide > ul.slide-left > li:eq(' + (n - 1) + ')').css({'display': 'block'});
   $('#promotion div.indicator .indicator-inner li').removeClass('on');
   $('#promotion div.indicator .indicator-inner li:eq(' + (n - 1) + ')').addClass('on');
   banerNow = n;
@@ -846,7 +912,6 @@ function showBanner(n) {
   bannerNext = (n === numbanner) ? 1 : (n + 1);
   console.log(bannerPrev + ' / ' + banerNow + ' / ' + bannerNext);
 }
-
 
 
 

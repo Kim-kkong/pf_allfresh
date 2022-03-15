@@ -705,23 +705,32 @@
       $(window).on('scroll', function() {
         checkScroll();
       });
-      
+
       function checkScroll() {
-        var scrollAmt = $(document).scrollTop();
-        if (scrollAmt > 200) {
-          $('#header div.event').css({'top': '-50px'});
-          $('#gnb').addClass('up');
-        } else {
-          $('#header div.event').css({'top': '0'});
-          $('#gnb').removeClass('up');
-        }
+      var scrollAmt = $(document).scrollTop();
+      if (scrollAmt > 200) {
+        $('#header div.event').css({'top': '-50px'});
+        $('#gnb').addClass('up');
+        $('#gnb-mobile').addClass('up');
         
-        $('#wrapper > div.quick-menu ').css({'top': (scrollAmt + 250) + 'px'});
+      } else {
+        $('#header div.event').css({'top': '0'});
+        $('#gnb').removeClass('up');
+
+        $('#gnb-mobile').removeClass('up');
+        $('#wrapper div.quick-menu').removeClass('on')
       }
       
-      $('#wrapper div.up').on('click', function() {
-        $('html, body').stop(true).animate({'scrollTop': 0}, 500);
-      });
+      $('#wrapper > div.quick-menu ').css({'top': (scrollAmt + 250) + 'px'});
+    }
+
+    $('#wrapper div.up').on('click', function() {
+      $('html, body').stop(true).animate({'scrollTop': 0}, 500);
+    });
+
+
+
+
 
   </script>
 
