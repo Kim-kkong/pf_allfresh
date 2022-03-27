@@ -48,10 +48,10 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 #gnb-mobile {display: none;}
 
-#gnb {position: fixed; top: 50px; width: 100%; height: 90px;  background-color: rgba(74, 41, 34, 0.8); transition: top 1s;}
-#gnb.up {position: fixed; top: 0; width: 100%; height: 60px;  background-color: rgba(74, 41, 34, 0.8); transition: top 1s;}
+#gnb {position: fixed; top: 50px; width: 100%; height: 90px;  background-color: rgba(74, 41, 34, 0.8); transition: top 1s; z-index: 10000;}
+#gnb.up {position: fixed; top: 0; width: 100%; height: 60px;  background-color: rgba(74, 41, 34, 0.8); transition: top 1s; z-index: 10000;}
 #gnb.up div.nav div.top-nav {position: absolute; height: 30px; font-size: 12px; color: #cccccc; right: 0; top: 15px; display: none;  transition: all 1s;}
-#gnb.up div.nav div.bottom-nav {width: 1200px;  position: absolute; top: 0;  height: 60px; transition: top 1s;}
+#gnb.up div.nav div.bottom-nav {width: 1200px;  position: absolute; top: 0;  height: 60px; transition: top 1s; z-index: 10000;}
 
 #gnb h1 {position: absolute; width: 188px; height: 30px; top: 50%; left: 350px; z-index: 100; transform: translate(0, -50%);}
 #gnb div.nav {position: absolute; width: 1200px; height: 90px; left: 50%; top: 0; transform: translate(-50%, 0); }
@@ -151,12 +151,12 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 #promotion li.right {width: 50%; height: 100%; overflow: hidden; }
 #promotion li.right img {position: relative; width: 100%; height: 100%; object-fit: cover;}
 #promotion li.right.on div {width: 440px; height: 565px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #ffffff;  z-index: 100; display: block; transition: top 1.5s;}
-#promotion li.right div {width: 440px; height: 565px; position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%); background-color: #ffffff; opacity: 0.8; z-index: 1000; display: block; }
+#promotion li.right div {width: 440px; height: 565px; position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%); background-color: #ffffff; opacity: 0.8; z-index: 10; display: block; }
 
 #promotion li.right.on img {transform: scale(1.05); transition: all 3s;}
 
 #promotion li.right div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 50%; width: 100%; display: block; opacity: 0.3;}
-#promotion li.right.on div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 23%; width: 100%; opacity: 1;  transition: top 3s;}
+#promotion li.right.on div h4 {font-size: 30px; padding: 15px 0; color: #333333; text-align: center; font-family: 'Noto Serif KR', serif; position: absolute; top: 23%; width: 100%; opacity: 1;  transition: top 3s; z-index: 10;}
 
 #promotion li.right div p.text-up {font-size: 18px; color: #666666; position: absolute; top: 60%; width: 100%; text-align: center; line-height: 20px; opacity: 0;}
 #promotion li.right.on div p.text-up {font-size: 18px; color: #666666;position: absolute; top: 45%; width: 100%; text-align: center; line-height: 20px;  display: block; opacity: 1;  transition: top 4s;}
@@ -271,13 +271,13 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; l
 
 
 /*sub_brandstory*/
-#sub_brand_main {position: relative; top: 0; left: 0; width: 100%; height: 100vh; background: url(../img/story/ab-bg-03.jpg);}
-#sub_brand_main img {position: absolute; top: 20%; left: 50%; transform: translate(-50%, 30%);}
+#sub_brand_main {position: relative; top: 0; left: 0; width: 100%; height: 100vh; background: url(../img/story/ab-bg-03.jpg); background-attachment : fixed;}
+#sub_brand_main img.logo {position: absolute; top: 20%; left: 50%; transform: translate(-50%, 30%);}
+#sub_brand_main img.behind {position: absolute; top: 0; left: 0; width: 100%; height: 100%;  opacity: 0;}
 #sub_brand_main h2 {position: absolute; top: 45%; left: 50%; transform: translate(-50%, 40%); color: #ffffff; font-size: 60px; text-align: center; font-family: 'Noto Serif KR', serif; letter-spacing: 6px; line-height: 70px;}
 #sub_brand_main h3 {position: absolute; top: 75%; left: 50%; transform: translate(-50%, 20%); color: #ffffff; font-size: 36px; text-align: center; font-family: 'Noto Serif KR', serif; letter-spacing: 6px; font-weight: 550; letter-spacing: 0;}
 #sub_brand_main p {position: absolute; top: 85%; left: 50%; transform: translate(-50%, 50%); color: #ffffff; font-size: 16px; text-align: center; font-weight: 400; letter-spacing: 0;}
 #sub_brand_main a {position: absolute; top: 93%; left: 50%; transform: translate(-50%, 0); color: #ffffff; font-size: 36px; text-align: center; letter-spacing: 6px;}
-
 
 
 #brand {position: relative; top: 0; background: url(../img/story/bg-dark.jpg) 0 0 repeat;}

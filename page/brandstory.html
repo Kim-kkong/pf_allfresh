@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="../css/web-font.css" />
     <link rel="stylesheet" href="../css/style-pc.css" media="screen and (min-width: 850.1px)" />
     <link rel="stylesheet" href="../css/style-m.css" media="screen and (max-width: 850.0px)" />
-    <script src="https://kit.fontawesome.com/46ab4b8894.js" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46ab4b8894.js" crossorigin="anonymous"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/dino-common.js"></script>
   </head>
@@ -349,15 +350,14 @@
         </nav>
       </header>
 
-
       <main id="main-brandstory">
         <section id="sub_brand_main">
-          <img alt="logo" src="../img/story/simbal.png" />
+          <img alt="logo" class="logo" src="../img/story/simbal.png" />
           <h2>PREMIUM<br />FRUITS</h2>
           <h3>"정직한 과일을 스마트하게 만나다"</h3>
           <p>과일 소믈리에가 보증하는 프리미엄 과일 브랜드, 올프레쉬</p>
           <a href="#"><i class="fas fa-thin fa-arrow-down-long"></i></a>
-
+          <img alt="behind img" class="behind" src="../img/story/bg-dark.jpg" />
         </section>
         <div class="parallax">
           <section id="brand">
@@ -367,7 +367,8 @@
               <h3>"신선하고 맛있는 과일을 소비자 대신 골라줄 수 없을까?"</h3>
               <p>올프레쉬는 이러한 고민에서 시작되었습니다.<br />
                 소비자를 대신해 ‘국내1호 과일 소믈리에’ 조향란이 전국을 직접 누비며 정직한 농가를 찾고,<br />
-                그곳의 과일 하나하나를 깐깐하게 확인한 후 최상의 과일에게만 ‘올프레쉬’라는 이름을 허락합니다.</p>
+                그곳의 과일 하나하나를 깐깐하게 확인한 후 최상의 과일에게만 ‘올프레쉬’라는 이름을 허락합니다.
+              </p>
             </div>
             <div class="bottom">
               <div class="left">
@@ -619,10 +620,27 @@
       });
       
       //scroll event
+      imgScroll(); 
       checkScroll();
+
       $(window).on('scroll', function() {
+        imgScroll();
         checkScroll();
       });
+
+      function imgScroll() {
+      var scrollAmt2 = $(document).scrollTop();
+      if (scrollAmt2 > 201) {
+        $('#sub_brand_main img.behind').css({'opacity' : '0.7', 'transition': 'all 0.5s'});
+       
+      } else if (100 < scrollAmt2 < 200) {  
+        $('#sub_brand_main img.behind').css({'opacity' : '0.3', 'transition': 'all 0.5s'});
+
+      } else {
+        $('#sub_brand_main img.behind').css({'opacity' : '0'});
+
+      }
+    }
       
       function checkScroll() {
       var scrollAmt = $(document).scrollTop();
@@ -637,10 +655,12 @@
 
         $('#gnb-mobile').removeClass('up');
         $('#wrapper div.quick-menu').removeClass('on')
+
       }
       
       $('#wrapper > div.quick-menu ').css({'top': (scrollAmt + 250) + 'px'});
     }
+
 
     $('#wrapper div.up').on('click', function() {
       $('html, body').stop(true).animate({'scrollTop': 0}, 500);
